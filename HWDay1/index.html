@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Homework Day 1</title>
+</head>
+<body>
+    <h2>Question 1</h2>
+    <button onclick="alert(num)">Alert!</button>
+    <h2>Question 2</h2>
+    <input type="text" id="input-q-2" />
+    <button onclick="assignVariable()">Assign</button>
+    <button onclick="alert(q2)">Alert!</button>
+    <h2>Question 6</h2>
+    <input type="number" id="input-q-6" />
+    <button onclick="addTwo()">Plus 2!</button>
+
+    <input type="color" />
+    <h2>Question 8</h2>
+    
+    <input type="text" id="input-q-8" placeholder="Please Enter Text!" />
+    <button onclick="sendToDiv()">Write Text</button>
+    <div id="output-8"></div>
+
+    <script type="text/javascript">
+     
+        var num = 12;
+        var q2;
+        var sendToDiv = function () {
+            "use strict";
+            var input = document.getElementById("input-q-8").value;
+            if (input === "") {
+                alert("Please enter some text!");
+            }
+            else {
+                document.getElementById("output-8").innerHTML = input;
+            }
+
+        };
+        var assignVariable = function () {
+            "use strict";
+            q2 = document.getElementById("input-q-2").value;
+            document.getElementById("input-q-2").value = "";
+        };
+        var addTwo = function () {
+            var inputValue = document.getElementById("input-q-6").value;
+            alert(Number(inputValue) + 2);
+        };
+       
+    </script>
+</body>
+</html>
